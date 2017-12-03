@@ -22,7 +22,12 @@ var MainLayer = cc.Layer.extend({
         var item3 = new cc.MenuItemFont("test3", this.test3, this);
         item3.x = 0 - cc.winSize.width/2 + 240;
         item3.y = 0 - cc.winSize.height/2 + 40;
-        var menu = new cc.Menu(item1, item2, item3);
+
+        var item4 = new cc.MenuItemFont("test4", this.test4, this);
+        item4.x = 0 - cc.winSize.width/2 + 340;
+        item4.y = 0 - cc.winSize.height/2 + 40;
+
+        var menu = new cc.Menu(item1, item2, item3, item4);
         this.addChild(menu);
 
 
@@ -38,7 +43,11 @@ var MainLayer = cc.Layer.extend({
     },
     test3:function () {
         cc.director.pushScene(new Act1Scene())
-    }
+    },
+    test4:function () {
+        cc.director.pushScene(new Act2Scene())
+    },
+
 });
 
 var MainScene = cc.Scene.extend({
