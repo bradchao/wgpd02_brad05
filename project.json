@@ -13,6 +13,7 @@
 
     "jsList" : [
         "src/resource.js",
+        "src/act1.js",
         "src/main.js"
     ]
 }
